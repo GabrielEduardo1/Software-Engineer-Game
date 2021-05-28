@@ -1,0 +1,82 @@
+html{
+    height: 99%;
+}
+body{
+    height: 99%;
+}
+.header{
+    color: rgb(91, 91, 248);
+    font-family: Impact, fantasy;
+    font-size: 28px;
+}
+.header h1{
+    text-align: center;
+}
+.flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.content-box {
+    text-align: center;
+    width: 60%;
+    padding: 50px;
+    color: rgb(91, 91, 248);
+    font-family: Impact, fantasy;
+}
+main{
+    align-items: center;
+}
+.center-text{
+    text-align: center;
+}
+.link-game{
+    border-radius: 30px;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 23px;
+    color: rgb(91, 91, 248);
+    border: 3px solid rgb(91, 91, 248);
+}
+a:hover{
+    background-color: rgba(91, 91, 248, 0.192);  
+}
+.border-body{
+    border: 3px solid rgb(91, 91, 248);
+    padding: 30px;
+    border-radius: 50px;
+}
+footer{
+    margin-top: 30px;
+}
+.autores{
+    color: rgb(91, 91, 248);
+}
+.pergunta{
+    color: rgb(91, 91, 248);
+    font-size: 25px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-weight: bold;
+}
+.alternativa{
+    color: rgb(91, 91, 248);
+    font-size: 20px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.button-form{
+    padding: 10px 20px;
+    background-color: rgb(91, 91, 248);
+    border: 0px;
+    color: white;
+    border-radius: 20px;
+    width: 50%;
+}
