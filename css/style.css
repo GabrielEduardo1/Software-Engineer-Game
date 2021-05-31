@@ -1,9 +1,4 @@
-html{
-    height: 99%;
-}
-body{
-    height: 99%;
-}
+
 .header{
     color: rgb(91, 91, 248);
     font-family: Impact, fantasy;
@@ -22,6 +17,10 @@ body{
     text-align: center;
     width: 60%;
     padding: 50px;
+    color: rgb(91, 91, 248);
+    font-family: Impact, fantasy;
+}
+.content-text{
     color: rgb(91, 91, 248);
     font-family: Impact, fantasy;
 }
@@ -45,6 +44,11 @@ a:hover{
 }
 .border-body{
     border: 3px solid rgb(91, 91, 248);
+    padding: 5px 50px;
+    border-radius: 50px;
+}
+.border-body2{
+    border: 3px solid rgb(91, 91, 248);
     padding: 30px;
     border-radius: 50px;
 }
@@ -59,6 +63,7 @@ footer{
     font-size: 25px;
     font-family: Comic Sans MS, Comic Sans, cursive;
     font-weight: bold;
+    text-align: center;
 }
 .alternativa{
     color: rgb(91, 91, 248);
@@ -66,11 +71,12 @@ footer{
     font-family: Comic Sans MS, Comic Sans, cursive;
 }
 .form{
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 .button-form{
     padding: 10px 20px;
@@ -79,4 +85,13 @@ footer{
     color: white;
     border-radius: 20px;
     width: 50%;
+}
+.center{
+    align-items: center;
+    justify-content: center;
+}
+.tot_acertos{
+    color: rgb(91, 91, 248);
+    font-size: 30px;
+    font-family: Impact, fantasy;
 }
