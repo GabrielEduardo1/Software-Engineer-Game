@@ -7,27 +7,10 @@
     $dados = mysqli_fetch_assoc($chute);
     $cont = $dados['contador'];
 
-    if(isset($_POST['alternativa'])){
-        $tentativa = $_POST['alternativa'];
-        $resposta = $_POST['resposta'];
+    if($cont > 20){
+        header('Location: acertos.php');
+    }    
 
-        if($cont > 20){
-            header('Location: acertos.php');
-        }else{
-            $updateContador = "UPDATE game SET contador =  contador + 1 WHERE id = 1";
-            $update = mysqli_query($conecta, $updateContador);
-        }
-        if($resposta == $tentativa){
-            $updateAcertos = "UPDATE game SET acertos =  acertos + 1 WHERE id = 1";
-            $update2 = mysqli_query($conecta, $updateAcertos);
-            unset($_POST['alternativa']);
-            unset($_POST['resposta']); 
-        }    
-    }
-    $questoes2 = "SELECT * FROM game WHERE id = 1";
-    $chute1 = mysqli_query($conecta, $questoes2);
-    $dados1 = mysqli_fetch_assoc($chute1);
-    
     $questoes = "SELECT * FROM game WHERE id = $cont";
     $pegarDados = mysqli_query($conecta, $questoes);
     $row = mysqli_fetch_assoc($pegarDados);
@@ -49,7 +32,7 @@
             <h1>SOFTWARE ENGINEER GAME</h1>
         </header>
             <main class="flex-box">
-                <form action="game.php" class="border-body form" method="post">
+                <form action="verificar.php" class="border-body form" method="post">
                     <div class='center'>
                         <p class="pergunta"><?php echo $row['id']?>. <?php echo $row['questao']?></p>
                         <input type="radio" name="alternativa" id="a" value="a" required="">
@@ -64,7 +47,7 @@
                     </div>
                     <input type="submit" value="Responder" class="button-form" name="button">
                     <h1>
-                        <span class="tot_acertos"><?php echo $dados1['acertos']?>/20</span>
+                        <span class="tot_acertos"><?php echo $dados['acertos']?>/20</span>
                     </h1>
                 </form>
             </main>
@@ -74,6 +57,5 @@
     </body>
 </html>
 <?php
-    
     mysqli_close($conecta);
 ?>
